@@ -23,6 +23,8 @@ namespace CPULoad
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
+            int load;
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
@@ -34,8 +36,16 @@ namespace CPULoad
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Thinking!");
-                    ConsumeCPU(40);
+                    try
+                    {
+                        load = int.Parse(context.Request.Query["l"]);
+                        await context.Response.WriteAsync("Thinking!");
+                        ConsumeCPU(load);
+                    }
+                    catch
+                    {
+                        await context.Response.WriteAsync("Invalid load parameter provided");
+                    }
                 });
             });
         }
