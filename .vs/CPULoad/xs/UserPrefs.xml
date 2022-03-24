@@ -1,0 +1,25 @@
+﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{13F5F54D-C7DF-4E12-B72C-0990174DC358}|Default">
+  <MonoDevelop.Ide.Workbench>
+    <Files>
+      <File FileName="CPULoad/Program.cs" Line="16" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="CPULoad" expanded="True" selected="True">
+            <Node name="CPULoad" expanded="True">
+              <Node name="Properties" expanded="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.ItemProperties.CPULoad PreferredExecutionTarget="/Applications/Safari.app" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
