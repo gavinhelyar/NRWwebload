@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
+using System.Threading;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -32,9 +34,33 @@ namespace CPULoad
             {
                 endpoints.MapGet("/", async context =>
                 {
-                    await context.Response.WriteAsync("Hello World!");
+                    await context.Response.WriteAsync("Thinking!");
+                    ConsumeCPU(40);
                 });
             });
         }
+
+        public static void ConsumeCPU(int percentage)
+        {
+            //int percentage = 80;
+            for (int i = 0; i < Environment.ProcessorCount; i++)
+            {
+                (new Thread(() =>
+                {
+                    Stopwatch watch = new Stopwatch();
+                    watch.Start();
+                    while (true)
+                    {
+                        if (watch.ElapsedMilliseconds > percentage)
+                        {
+                            Thread.Sleep(100 - percentage);
+                            watch.Reset();
+                            watch.Start();
+                        }
+                    }
+                })).Start();
+            }
+        }
     }
+       
 }

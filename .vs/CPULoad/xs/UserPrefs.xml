@@ -1,14 +1,16 @@
 ﻿<Properties GitUserInfo="UsingGIT" StartupConfiguration="{13F5F54D-C7DF-4E12-B72C-0990174DC358}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="CPULoad/Startup.cs">
     <Files>
       <File FileName="CPULoad/Program.cs" Line="16" Column="1" />
+      <File FileName="CPULoad/Startup.cs" Line="32" Column="14" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="CPULoad" expanded="True" selected="True">
+          <Node name="CPULoad" expanded="True">
             <Node name="CPULoad" expanded="True">
               <Node name="Properties" expanded="True" />
+              <Node name="Startup.cs" selected="True" />
             </Node>
           </Node>
         </State>
